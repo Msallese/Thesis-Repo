@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtX"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="82dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtY"
+        android:layout_alignBottom="@+id/txtX"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Train Movement"
+        android:id="@+id/btnTrain"
+        android:onClick="startTraining"
+        android:layout_toEndOf="@+id/txtX"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print Xs"
+        android:id="@+id/btnPrintData"
+        android:onClick="printX"
+        android:layout_above="@+id/btnTrain"
+        android:layout_alignRight="@+id/txtY"
+        android:layout_alignEnd="@+id/txtY"
+        android:layout_toRightOf="@+id/btnRecog"
+        android:layout_toEndOf="@+id/btnRecog" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewAccData"
+        android:layout_toStartOf="@+id/btnPrintData"
+        android:layout_below="@+id/btnTrain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txtY"
+        android:layout_alignEnd="@+id/txtY" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print Ys"
+        android:id="@+id/button"
+        android:onClick="printY"
+        android:layout_below="@+id/btnPrintData"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recognize"
+        android:id="@+id/btnRecog"
+        android:onClick="recognizeMovement"
+        android:layout_alignTop="@+id/btnTrain"
+        android:layout_toRightOf="@+id/btnTrain"
+        android:layout_toEndOf="@+id/btnTrain"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Train Recognize"
+        android:id="@+id/button2"
+        android:onClick="trainRecognizeMovement"
+        android:layout_toEndOf="@+id/txtX"
+        android:layout_toStartOf="@+id/btnPrintData"
+        android:layout_alignTop="@+id/btnPrintData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnPrintData" />
+
+</RelativeLayout>
